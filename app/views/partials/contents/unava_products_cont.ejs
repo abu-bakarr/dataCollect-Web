@@ -1,0 +1,29 @@
+<!-- UNAVAILABLE PRODUCTS CONTENT -->
+<h5 class="center header-text wow fadeInDown">Expecting the following products</h5>
+<div class="row">
+    <div class="card col l7 push-l4 wow fadeInRight">
+        <h5>Today</h5>
+        <% riceProduct.forEach(function(item){ %>
+            <p>
+                <%= item.pdName %> <%= item.pdQuantity %><a href="#"><i class="material-icons orange-text right">shopping_basket</i></a>
+            </p>
+        <% }); %>
+    </div> 
+    <div class="card col l7 push-l4 wow fadeInRight">
+        <h5>In two days</h5>
+        <% riceProduct.forEach(function(item){ %>
+            <p>
+                <%= item.pdName %> <%= item.pdQuantity %><a href="#"><i class="material-icons orange-text right">shopping_basket</i></a>
+            </p>
+        <% }); %>
+    </div> 
+    
+    <div class="card col l7 push-l4 wow fadeInRight ">
+        <h5>next week</h5>
+        <% riceProduct.forEach(function(item){ %>
+            <p>
+                <%= item.pdName %> <%= item.pdQuantity %><a href="#"><i class="material-icons orange-text right">shopping_basket</i></a>
+            </p>
+        <% }); %>
+    </div>
+</div> <!-- end of row -->

@@ -1,0 +1,162 @@
+<!-- product trade flow page -->
+<section class="section product_trade_flow_section hide-on-large-only">
+    <!-- <div class="divider"></div> -->
+    <form method="POST" id="productTradeFlowForm">
+        <div class="row center">
+            <!-- capturing the data -->
+            <div class="col s12">
+                <h4 class="center green-text text-darken-1">PRODUCT TRADE FLOW</h4>
+                <h5 class="center green-text text-darken-1">Please fill in the form</h5>
+                <div class="submitAlert">
+                    <p>Success: Your data has been sent</p>
+                </div>
+                <div class="errorAlert">
+                    <p>Error: All fields requires input</p>
+                </div>
+                <div class="container">
+                    <ul class="collapsible">
+                        <!-- Market Location Information -->
+                        <li class="active">
+                            <div class="collapsible-header">Market Location</div>
+                            <div class="collapsible-body">
+                                <div class="input-field">
+                                    <label for="tradeFlowProduct">Product name</label>
+                                    <input type="text" name="tradeFlowProduct" id="tradeFlowProduct" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowQuantity">Quantity</label>
+                                    <input type="text" name="tradeFlowQuantity" id="tradeFlowQuantity" required>
+                                </div>
+                                 <div class="input-field">
+                                    <label for="tradeFlowPrice">Price</label>
+                                    <input type="text" name="tradeFlowPrice" id="tradeFlowPrice" required>
+                                </div>
+                               <!--  <div class="input-field">
+                                    <select id="tradeFlowDistrict" required class="validate">
+                                        <option value="" class="gray-text" required disabled selected>Choose a District</option>
+                                        <option  id="DIST_WAU">Western Area Urban</option>
+                                        <option  id="DIST_WAR">Western Area Rural</option>
+                                        <option  id="DIST_FAL">Falaba</option>
+                                        <option  id="DIST_KOI">Koinadugu</option>
+                                        <option  id="DIST_BOM">Bombali</option>
+                                        <option  id="DIST_TON">Tonkolili</option>
+                                        <option  id="DIST_KAM">Kambia</option>
+                                        <option  id="DIST_KAR">Karene</option>
+                                        <option  id="DIST_POR">Porto Loko</option>
+                                        <option  id="DIST_BO">Bo</option>
+                                        <option  id="DIST_BON">Bonthe</option>
+                                        <option  id="DIST_PUJ">Pujehun</option>
+                                        <option  id="DIST_MOY">Moyamba</option>
+                                        <option  id="DIST_KEN">Kenema</option>
+                                        <option  id="DIST_KAL">Kaliahun</option>
+                                        <option  id="DIST_KON">Kono</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowregion">Region</label> -->
+                                    <!-- <input type="text" name="tradeFlowRegion" id="tradeFlowRegion" required> 
+                                    <select id="tradeFlowRegion" required class="validate">
+                                        <option value="" class="gray-text" required disabled selected>Select a region</option>
+                                        <option id="WAU">Wester Area Urban</option>
+                                        <option id="WAR">Wester Area Rural</option>
+                                        <option id="NORT">North</option>
+                                        <option id="NORTW">North West</option>
+                                        <option id="EAST">East</option>
+                                        <option id="SOUTH">South</option>
+                                    </select>
+                                </div> -->
+                                <div class="input-field">
+                                    <label for="tradeFlowEnumerator">Enumerator</label>
+                                    <input type="text" name="tradeFlowEnumerator" id="tradeFlowEnumerator" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowDate">Date</label>
+                                    <input type="text" class="datepicker" id="tradeFlowDate" required>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- FROM Agricultural Input Trade flow -->
+                         <li>
+                            <div class="collapsible-header">From</div>
+                            <div class="collapsible-body">
+                                <div class="input-field">
+                                    <label for="tradeFlowLocalityFROM">Locality</label>
+                                    <input type="text" name="tradeFlowLocalityFROM" id="tradeFlowLocalityFROM" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowChiefdomFROM">Chiefdom</label>
+                                    <input type="text" name="tradeFlowChiefdomFROM" id="tradeFlowChiefdomFROM" required>
+                                </div>
+                                <div class="input-field">
+                                    <select id="tradeFlowDistrictsFROM" required class="validate">
+                                        <option value="" class="gray-text" required disabled selected>Choose a District</option>
+                                        <option  id="DIST_WAU">Western Area Urban</option>
+                                        <option  id="DIST_WAR">Western Area Rural</option>
+                                        <option  id="DIST_FAL">Falaba</option>
+                                        <option  id="DIST_KOI">Koinadugu</option>
+                                        <option  id="DIST_BOM">Bombali</option>
+                                        <option  id="DIST_TON">Tonkolili</option>
+                                        <option  id="DIST_KAM">Kambia</option>
+                                        <option  id="DIST_KAR">Karene</option>
+                                        <option  id="DIST_POR">Porto Loko</option>
+                                        <option  id="DIST_BO">Bo</option>
+                                        <option  id="DIST_BON">Bonthe</option>
+                                        <option  id="DIST_PUJ">Pujehun</option>
+                                        <option  id="DIST_MOY">Moyamba</option>
+                                        <option  id="DIST_KEN">Kenema</option>
+                                        <option  id="DIST_KAL">Kaliahun</option>
+                                        <option  id="DIST_KON">Kono</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowCountryFROM">Country</label>
+                                    <input type="text" name="tradeFlowCountryFROM" id="tradeFlowCountryFROM" required>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- TO Agricultural Input Trade FLow -->
+                        <li>
+                            <div class="collapsible-header">To</div>
+                            <div class="collapsible-body">
+                                <div class="input-field">
+                                    <label for="tradeFlowLocalityTO">Locality</label>
+                                    <input type="text" name="tradeFlowLocalityTO" id="tradeFlowLocalityTO" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowChiefdomTO">Chiefdom</label>
+                                    <input type="text" name="tradeFlowChiefdomTO" id="tradeFlowChiefdomTO" required>
+                                </div>
+                                <div class="input-field">
+                                    <select id="tradeFlowDistrictsTO" required class="validate">
+                                        <option value="" class="gray-text" required disabled selected>Choose a District</option>
+                                        <option  id="DIST_WAU">Western Area Urban</option>
+                                        <option  id="DIST_WAR">Western Area Rural</option>
+                                        <option  id="DIST_FAL">Falaba</option>
+                                        <option  id="DIST_KOI">Koinadugu</option>
+                                        <option  id="DIST_BOM">Bombali</option>
+                                        <option  id="DIST_TON">Tonkolili</option>
+                                        <option  id="DIST_KAM">Kambia</option>
+                                        <option  id="DIST_KAR">Karene</option>
+                                        <option  id="DIST_POR">Porto Loko</option>
+                                        <option  id="DIST_BO">Bo</option>
+                                        <option  id="DIST_BON">Bonthe</option>
+                                        <option  id="DIST_PUJ">Pujehun</option>
+                                        <option  id="DIST_MOY">Moyamba</option>
+                                        <option  id="DIST_KEN">Kenema</option>
+                                        <option  id="DIST_KAL">Kaliahun</option>
+                                        <option  id="DIST_KON">Kono</option>
+                                    </select>
+                                </div>
+                                <div class="input-field">
+                                    <label for="tradeFlowCountryTO">Country</label>
+                                    <input type="text" name="tradeFlowCountryTO" id="tradeFlowCountryTO" required>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <input class="btn btn-small btn-extend blue lighten-2 white-text" type="submit" value="send">
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,116 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>DASHBOARD</h2>
+                <h5>Welcome <%= adminUserName.name %></h5>
+            </div>
+            <!-- Widgets -->
+            <!-- <% include ../admin-widgets %> -->
+            <!-- #END# Widgets -->
+            <!-- Order Table -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Product Orders
+                                <small>Showing the list of product orders</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                    <thead>
+                                        <tr class="center-text">
+                                            <!-- <th>#</th> -->
+                                            <th>Name</th>
+                                            <th>Address</th>
+                                            <th>PHONE</th>
+                                            <th>Email</th>
+                                            <th>Product</th>
+                                            <th>Qty</th>
+                                            <th>Fbo</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr class="center-text">
+                                            <!-- <th>#</th> -->
+                                            <th>NAME</th>
+                                            <th>ADDRESS</th>
+                                            <th>PHONE</th>
+                                            <th>EMAIL</th>
+                                            <th>PRODUCT</th>
+                                            <th>QTY</th>
+                                            <th>FBO</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <% orders.forEach(order => {%>
+                                            <tr>
+                                                <!-- <th scope="row"><%= order.index %></th> -->
+                                                <td><%= order.name %></td>
+                                                <td><%= order.address %></td>
+                                                <td><%= order.tele %></td>
+                                                <td><%= order.email %></td>
+                                                <td><%= order.productName %></td>
+                                                <td><%= order.quantity %></td>
+                                                <td><%= order.fbo %></td>
+                                                <td>
+                                                    <!-- <form action="/admin/order/delete/<%= order._id %>"> -->
+                                                        <a href="/admin/order/delete/<%= order._id %>"><i class="small material-icons red-text">delete</i></a>
+                                                        <!-- <button class="btn btn-danger" type="submit">Delete Order</button> -->
+                                                    <!-- </form> -->
+                                                </td>
+                                            </tr>
+                                        <%});%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Order Table -->
+            <!-- <div class="row clearfix"> -->
+                <!-- Visitors -->
+                <!-- <% include ../admin-visitors %> -->
+                <!-- #END# Visitors -->
+            <!-- </div> -->
+
+            <!-- <div class="row clearfix"> -->
+                <!-- Task Info -->
+                <!-- <% include ../admin-task-info %> -->
+                <!-- #END# Task Info -->
+                <!-- Browser Usage -->
+                <!-- <% include ../admin-browser-usage %> -->
+                <!-- #END# Browser Usage -->
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+</body>
+
+</html>

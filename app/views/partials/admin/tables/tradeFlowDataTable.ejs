@@ -1,0 +1,85 @@
+<% include ../admin-head %>
+
+    <body class="theme-green">
+        <!-- Page Loader -->
+        <% include ../admin-page-loader %>
+            <!-- #END# Page Loader -->
+            <!-- Overlay For Sidebars -->
+            <div class="overlay"></div>
+            <!-- #END# Overlay For Sidebars -->
+            <!-- Top Bar -->
+            <% include ../top-nav %>
+                <!-- #Top Bar -->
+                <section>
+                    <!-- Left Sidebar -->
+                    <% include ../admin-left-sidebar %>
+                        <!-- #END# Left Sidebar -->
+                        <!-- Right Sidebar -->
+                        <% include ../admin-right-sidebar %>
+                            <!-- #END# Right Sidebar -->
+                </section>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="block-header">
+                            <h2>TRADE FLOW DATA TABLE</h2>
+                        </div>
+                        <!-- Exportable Table -->
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2>
+                                            Showing all the trade flow data received
+                                        </h2>
+                                    </div>
+                                    <div class="body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Commodity</th>
+                                                        <th>Value</th>
+                                                        <th>Price</th>
+                                                        <th>Enumerator</th>
+                                                        <th>Date</th>
+                                                        <th>District From</th>
+                                                        <th>District To</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                       <th>Commodity</th>
+                                                        <th>Value</th>
+                                                        <th>Price</th>
+                                                         <th>Enumerator</th>
+                                                        <th>Date</th>
+                                                        <th>District From</th>
+                                                        <th>District To</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody id="tradeFlowTableBody">
+                                                    <!-- <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #END# Exportable Table -->
+                    </div>
+                </section>
+
+                <% include ../admin-jslinks.ejs %>
+    </body>
+
+    </html>

@@ -1,0 +1,86 @@
+﻿[
+  {
+    "outputFile": "./app/public/css/themes/all-themes.css",
+    "inputFile": "./app/public/scss/themes/_all-themes.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-red.css",
+    "inputFile": "./app/public/scss/themes/theme-red.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-amber.css",
+    "inputFile": "./app/public/scss/themes/theme-amber.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-black.css",
+    "inputFile": "./app/public/scss/themes/theme-black.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-blue-grey.css",
+    "inputFile": "./app/public/scss/themes/theme-blue-grey.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-blue.css",
+    "inputFile": "./app/public/scss/themes/theme-blue.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-brown.css",
+    "inputFile": "./app/public/scss/themes/theme-brown.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-cyan.css",
+    "inputFile": "./app/public/scss/themes/theme-cyan.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-deep-orange.css",
+    "inputFile": "./app/public/scss/themes/theme-deep-orange.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-deep-purple.css",
+    "inputFile": "./app/public/scss/themes/theme-deep-purple.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-green.css",
+    "inputFile": "./app/public/scss/themes/theme-green.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-grey.css",
+    "inputFile": "./app/public/scss/themes/theme-grey.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-indigo.css",
+    "inputFile": "./app/public/scss/themes/theme-indigo.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-light-blue.css",
+    "inputFile": "./app/public/scss/themes/theme-light-blue.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-lime.css",
+    "inputFile": "./app/public/scss/themes/theme-lime.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-orange.css",
+    "inputFile": "./app/public/scss/themes/theme-orange.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-pink.css",
+    "inputFile": "./app/public/scss/themes/theme-pink.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-purple.css",
+    "inputFile": "./app/public/scss/themes/theme-purple.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-teal.css",
+    "inputFile": "./app/public/scss/themes/theme-teal.scss"
+  },
+  {
+    "outputFile": "./app/public/css/themes/theme-yellow.css",
+    "inputFile": "./app/public/scss/themes/theme-yellow.scss"
+  },
+  {
+    "outputFile": "./app/public/css/style.css",
+    "inputFile": "./app/public/scss/style.scss"
+  }
+]

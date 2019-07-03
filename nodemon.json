@@ -1,0 +1,6 @@
+{
+    "env":{
+        "MONGO_ADMIN_PW": "dD4PY4pRY9w2g01P",
+        "JWT_KEY": "secretkey"
+    }
+}

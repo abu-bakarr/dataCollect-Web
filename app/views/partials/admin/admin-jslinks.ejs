@@ -1,0 +1,197 @@
+<!-- Jquery Core Js -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<!-- <script src="/js/jquery-3.3.1.min.js" charset="utf-8"></script> -->
+
+<!-- Bootstrap Core Js -->
+<script src="/plugins/bootstrap/js/bootstrap.js"></script>
+
+<!-- Select Plugin Js -->
+<script src="/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+<!-- Slimscroll Plugin Js -->
+<script src="/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+<!-- Waves Effect Plugin Js -->
+<script src="/plugins/node-waves/waves.js"></script>
+
+<!-- Jquery CountTo Plugin Js -->
+<script src="/plugins/jquery-countto/jquery.countTo.js"></script>
+
+<!-- Jquery DataTable Plugin Js -->
+<script src="/plugins/jquery-datatable/jquery.dataTables.js"></script>
+<script src="/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+<script src="/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+
+<!-- Admin Custom Js -->
+<script src="/js/admin.js"></script>
+
+<script src="/js/pages/tables/jquery-datatable.js"></script>
+
+<!-- firebase script -->
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+
+<!-- firebase configuration script -->
+<script src="/js/firebaseConfig.js"></script>
+
+<!-- market data script -->
+<script src="/js/fetchMarketData.js"></script>
+
+<!-- tradeflow data script -->
+<script src="/js/fetchTradeFlowData.js"></script>
+
+<!-- export trade flow script -->
+<script src="/js/fetchExportFlow.js"></script>
+
+<!-- sweet alert script -->
+<!-- <script src="/js/sweetalert.js"></script> -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<script>
+    $(function(){
+        // new WOW().init();
+        $('.sidenav').sidenav();
+        // $('select').formSelect();
+
+        // for HTML5 "required" attribute
+        $("select[required]").css({display: "inline", height: 0, padding: 0, width: 0});
+        $('.collapsible').collapsible();
+        $('.datepicker').datepicker();
+        $('.slider').slider({indicators : false, interval: 5000, height: 600});
+        $('.dropdown-trigger').dropdown({hover: true});
+        $('.parallax').parallax();
+        $('.materialboxed').materialbox();
+        $('.modal').modal();
+
+        setTimeout(function(){
+            $('.alertCard').show();
+            // $('.auto-hide').slideUp(300);
+        }, 3000);
+
+        // publish new post button
+        $('#btn_publish_new_product').click(e =>{
+            e.preventDefault();
+
+            // get the value of the input fields
+            var district = $('#district').val();
+            var product = $('#product').val();
+            var quantity = $('#quantity').val();
+
+            // alert(district +' '+product+' '+quantity);
+            // ajax request to publish new available product per district
+            $.ajax({
+                type: 'POST',
+                url: '/admin/post/new/product',
+                data: {district: district, product: product, quantity:quantity},
+                success: function(response){
+
+                }
+            });
+        });
+
+        $('#btn_publish_ava_prod_per_dist').click(e =>{
+            e.preventDefault();
+
+            // get the value of the input fields
+            var district = $('#district').val().toLowerCase();
+            var product = $('#product').val();
+            var quantity = $('#quantity').val();
+
+            // alert(district +' '+product+' '+quantity);
+            // ajax request to publish new available product per district
+            $.ajax({
+                type: 'POST',
+                url: '/admin/post/new/product-by-district',
+                data: {district: district, product: product, quantity:quantity},
+                success: function(response){
+                  // resetting the input fields
+                    $('#district').val(" ");
+                    $('#product').val(" ");
+                    $('#quantity').val(" ");
+
+                    // display the alert dialog
+                    swal({
+                          title: "Product Posted Successful",
+                          text: "new product posted for "+district,
+                          icon: "success",
+                          button: "Ok",
+                        });
+                }
+            });
+        });
+
+
+        // fbo register button
+        // $('#register_fbo').click(e => {
+        //     e.preventDefault();
+
+        //     // fetching the variables
+        //     var fboName = $('#fboName').val();
+        //     var listOfProd = $('#listOfProd').val();
+        //     var location = $('#location').val();
+        //     var cheifdom = $('#cheifdom').val();
+        //     var district = $('#district').val();
+        //     var region = $('#region').val();
+        //     var totalNoOfWorkers = $('#totalNoOfWorkers').val();
+        //     var briefBio = $('#briefBio').val();
+        //     var execHeadName = $('#execHeadName').val();
+        //     var execHeadAddress = $('#execHeadAddress').val();
+        //     var execHeadTele = $('#execHeadTele').val();
+        //     var execHeadEmail = $('#execHeadEmail').val();
+        //     var gender = $('#gender').val();
+        //     // var uploadedFile = $('#uploadedFile').val();
+
+        //     // console.log(fboName, listOfProd,location,
+        //     //             cheifdom,
+        //     //             district,
+        //     //             region,
+        //     //             totalNoOfWorkers,
+        //     //             briefBio,
+        //     //             execHeadName,
+        //     //             execHeadAddress,
+        //     //             execHeadTele,
+        //     //             execHeadEmail,
+        //     //             gender);
+        //     // ajax
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: 'http://localhost:3000/admin/register/farmer',
+        //         data: {fboName: fboName, listOfProd: listOfProd, location: location, cheifdom: cheifdom,
+        //                 district: district, region: region, totalNoOfWorkers: totalNoOfWorkers, briefBio: briefBio,
+        //                 execHeadName: execHeadName, execHeadAddress: execHeadAddress, execHeadTele: execHeadTele,
+        //                 execHeadEmail: execHeadEmail, gender: gender},
+        //         success: (response) => {
+
+
+        //             var html = `<tr>
+        //                         <td>
+        //                             <img src="${response.photo}" alt="" width="50" height="50" class="circle">
+        //                         </td>
+        //                         <td>${response.executive_head_name}</td>
+        //                         <td>${response.executive_head_address}</td>
+        //                         <td>${response.executive_head_tele}</td>
+        //                         <td>${response.executive_head_email}</td>
+        //                         <td>
+        //                             <div class="row">
+        //                                 <a href="/admin/fbo/record/edit/${ response._id }" class="btn btn-warning">Edit</a>
+        //                                 <a href="/admin/records/fbos/${ response._id }" class="btn btn-danger push-m1">Delete</a>
+        //                             </div>
+        //                         </td>
+        //                     </tr>`;
+        //                     console.log(response);
+        //                     $('.fbo_list').append(html);
+        //         }
+        //     });
+        // });
+    });
+
+</script>

@@ -1,0 +1,38 @@
+{
+    "products":{
+      "cash_crops":[{
+              "name": "cacoa",
+              "shortname": "cacoa",
+              "quantity": "100 bags"
+          },{
+              "name": "Rice",
+              "shortname": "rice",
+              "quantity": "200 bags"
+          },{
+              "name": "Palm Oil",
+              "shortname": "palmOil",
+              "quantity": "100 gallons"
+          },{
+              "name": "Coffee",
+              "shortname": "coffee",
+              "quantity": "150 bags"
+          },{
+              "name": "cacoa",
+              "shortname": "cacoa",
+              "quantity": "100 bags"
+          },{
+              "name": "Rice",
+              "shortname": "rice",
+              "quantity": "200 bags"
+          },{
+              "name": "Palm Oil",
+              "shortname": "palmOil",
+              "quantity": "100 gallons"
+          },{
+              "name": "Coffee",
+              "shortname": "coffee",
+              "quantity": "150 bags"
+          }
+        ]
+    }
+}

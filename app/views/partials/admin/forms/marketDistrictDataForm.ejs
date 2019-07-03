@@ -1,0 +1,66 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Market District Form</h2>
+            </div>
+            <!-- Marekt District Form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Please fill in the form</h2>
+                        </div>
+                        <div class="body">
+                            <form method="POST" action="/admin/createMarketData" class="marketDataApiForm">
+                                <div class="row">
+                                    <!-- messages -->
+                                    <% include ../messages %>
+                                    <!-- end of message -->
+                                    <div class="input-field col s12 m4">
+                                        <i class="material-icons prefix"></i>
+                                        <label for="district">District</label>
+                                        <input id="district" type="text" class="validate" name="district" required>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="product">Product</label>
+                                        <input id="product" type="text" class="validate" name="product" required>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="price">Price</label>
+                                        <input id="price" type="number" class="validate" name="price" required>
+                                    </div>
+                                </div>
+                                <input class="btn-large btn-enum blue" type="submit" value="POST">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Marekt District Form -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

@@ -1,0 +1,24 @@
+<!-- INFO CONTENT -->
+<section class="section info-section">
+    <h3 class="center">Improve your agric skills</h3>
+    <!-- <div class="center line green hide-on-med-and-down-only"></div> -->
+    <div class="info">
+        <div class="row">
+            <% material.forEach(material => { %>
+                <div class="col s12 m6 l3">
+                    <div class="card learning">
+                        <i class="col s12 m12 l12 material-icons green-text center">spa</i>
+                        <div class="card-content">
+                            <h5 class="center"><%= material.title %></h5>
+                            <p class="center con"><%= material.content %></p>
+                            <div class="center">
+                                <a href="/learning/info/<%= material._id %>" class="btn info-btn orange white-text">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <%});%>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <% include partials/templates/head.ejs %>
+</head>
+<body id="<%= pageID %>">
+    <section class="section admin-login-section">
+        <div class="container">
+            <img src="/images/Sierra_Leone_Coat_Of_Arms.png" class="avt"/>
+            <h4 class="center green-text lighten-2">Admin Login</h4>
+            <!-- LOGIN FORM -->
+            <form method="POST" action="/admin">
+                <% include ./partials/admin/messages %>
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <label for="icon_prefix">Email</label>
+                    <input id="loginEmail" type="email" class="validate" name="email" required value="<%= typeof username != 'undefined' ? username: '' %>">
+                </div>
+                <div class="input-field">
+                    <i class="material-icons prefix">lock</i>
+                    <label for="icon_telephone">Password</label>
+                    <input id="loginPassword" type="password" class="validate" name="password" required value="<%= typeof password != 'undefined' ? password: '' %>">
+                </div>
+                <input class="btn btn-large btn-extend green white-text" type="submit" value="login" name="loginButton">
+            </form>
+        </div>
+    </section>
+
+    <!-- firebase script -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <!-- main script -->
+    <script src="/js/main.js"></script>
+
+    <!-- including the js scripts template -->
+    <% include partials/templates/jsscripts.ejs %>
+</body>
+</html>

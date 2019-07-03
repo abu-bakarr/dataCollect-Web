@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <% include partials/templates/head.ejs %> <!-- including the head template-->
+</head>
+<body id="<%= pageID %>">
+    <% include partials/templates/web-header.ejs %> <!-- including the header template -->
+    <!-- farmers section-->
+    <div class="container">
+        <div class="row ">
+            <div class="row">
+                <div class="col 12 m8">
+                    <img id="farmer-info-img" class="img-responsive" src="<%= farmerDetail.photo %>" alt="Farmer">
+                </div>
+                <div class="col s12 m4 details">
+                    <h5><b>FBO HEAD</b>      : <%= farmerDetail.executive_head_name %></h5>
+                    <h5><b>MOBILE</b>    : <%= farmerDetail.executive_head_tele %></h5>
+                    <h5><b>PRODUCT</b>   : <%= farmerDetail.products %></h5>
+                    <h5><b>LOCATION</b>  : <%= farmerDetail.location %></h5>
+                    <h5><b>CHIEFDOM</b>  : <%= farmerDetail.chiefdom %></h5>
+                    <h5><b>DISTRICT</b>  : <%= farmerDetail.district %></h5>
+                    <h5><b>REGION</b>    : <%= farmerDetail.region %></h5>
+                    <h5><b>EXPRIENCE</b> : <%= farmerDetail.exprience %></h5>
+                </div>
+            </div>
+            <div class="row details">
+                <div class="col s12 m12">
+                    <!-- displaying the bio in the farmer detail -->
+                    <p><%- farmerDetail.brief_bio %></p>
+                </div>
+            </div>
+            <i class="material-icons left prefix">chevron_left</i><a href="/farmers">go back</a>
+        </div><!-- end of main row -->
+    </div><!-- end of container -->
+
+    <!-- including the js scripts template -->
+    <% include partials/templates/jsscripts.ejs %>
+
+</body>
+    <!-- including the footer template -->
+</html>

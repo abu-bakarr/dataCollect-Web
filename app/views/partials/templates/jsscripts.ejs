@@ -1,0 +1,88 @@
+<!-- scripts -->
+<!-- <script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.7.1/chartjs-plugin-streaming.min.js"></script> -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<script src="/js/wow.min.js"></script>
+
+<script>
+    $(function(){
+        new WOW().init();
+        $('.sidenav').sidenav();
+        $('select').formSelect();
+        $('.tabs').tabs();
+
+        // for HTML5 "required" attribute
+        $("select[required]").css({
+            display: "inline", 
+            height: 0, 
+            padding: 0, 
+            width: 0
+        });
+        $('.collapsible').collapsible();
+        $('.datepicker').datepicker();
+        $('.slider').slider({
+            indicators : false, 
+            interval: 5000,
+            height: 600
+        });
+        $('.dropdown-trigger').dropdown({hover: true});
+        $('.parallax').parallax({
+            height: 200
+        });
+        $('.materialboxed').materialbox();
+        $('.modal').modal();
+        $('.carousel').carousel();
+
+        $(".regular").slick({
+            dots: false,
+            infinite: true,
+            centerMode: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            adaptiveHeight: true,
+            arrows: true,
+            // prevArrow: true,
+            // nextArrow: true,
+        });
+       
+
+        // $(".variable").slick({
+        //     dots: true,
+        //     infinite: true,
+        //     variableWidth: true
+        // });
+
+        // for the scroll to top button
+        var offset = 2;
+        var duration = 500;
+
+        // $('.to-top').fadeOut(duration);
+
+        $(window).scroll(function(){
+            if((this).scrollTop() > offset){
+                $('.to-top').fadeIn(duration);
+            } else {
+                $('.to-top').fadeOut(duration);
+            }
+        });
+
+        $('.to-top').click(function(){
+            $('body').animate({scrollTop: 0, duration})
+        });
+
+
+        setTimeout(function(){ $('.alertCard').show(); }, 3000);
+
+    });
+
+
+</script>

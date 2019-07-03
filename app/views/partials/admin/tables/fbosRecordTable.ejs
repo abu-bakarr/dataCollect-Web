@@ -1,0 +1,101 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>FBO'S TABLE</h2>
+            </div>
+            <!-- CBO Record With Exportable Table -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Showing all the registered fbos
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <!-- messages -->
+                                <% include ../messages %>
+                                <!-- end of messages -->
+                                <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                    <thead>
+                                        <tr>
+                                            <th>Photo</th>
+                                            <th>Fbo Head</th>
+                                            <th>From</th>
+                                            <th>Address</th>
+                                            <th>Tol No. Farmers</th>
+                                            <th>Phone</th>
+                                            <th>District</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Photo</th>
+                                            <th>Fbo Head</th>
+                                            <th>From</th>
+                                            <th>Address</th>
+                                            <th>Tol No. Farmers</th>
+                                            <th>Phone</th>
+                                            <th>District</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody class="fbo_list">
+                                        <!-- looping through the cbos -->
+                                        <% fbo.forEach(fbo => {%>
+                                        <tr>
+                                            <td>
+                                                <img src="<%= fbo.photo %>" alt="" width="50" height="50" class="circle">
+                                                <!-- <img src="/images/farmerUploads/<%= fbo.photo %>.png" alt="" class="circle"> -->
+                                            </td>
+                                            <td><%= fbo.executive_head_name %></td>
+                                            <td><%= fbo.fbo_name %></td>
+                                            <td><%= fbo.executive_head_address %></td>
+                                            <td><%= fbo.total_no_of_staffs %></td>
+                                            <td><%= fbo.executive_head_tele %></td>
+                                            <td><%= fbo.district %></td>
+                                            <td>
+                                                <div class="row">
+                                                    <a href="/admin/fbo/record/edit/<%= fbo._id %>"><i class="small material-icons orange-text lighten-2">edit</i></a>
+                                                    <a href="/admin/records/fbos/<%= fbo._id %>"><i class="small material-icons red-text">delete</i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <%});%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# CBO Record With Exportable Table -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

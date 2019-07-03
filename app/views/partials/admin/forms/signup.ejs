@@ -1,0 +1,86 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Admin Registration Form</h2>
+            </div>
+            <!-- Admin Signup Form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Please fill in the form</h2>
+                        </div>
+                        <div class="body">
+                            <form method="POST" action="/admin/register/admin">
+                                <!-- message -->
+                                <% include ../messages %>
+                                <!-- end of message -->
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">person</i>
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" class="validate" name="fullName" required autofocus value="<%= typeof fullName != 'undefined' ? fullName: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">email</i>
+                                        <label for="email">Email</label>
+                                        <input id="email" type="email" class="validate" name="email" required value="<%= typeof email != 'undefined' ? email: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">lock</i>
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" class="validate" name="password" required value="<%= typeof password != 'undefined' ? password: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">lock</i>
+                                        <label for="password2">Confirm Password</label>
+                                        <input id="password2" type="password" class="validate" name="password2" required value="<%= typeof password2 != 'undefined' ? password2: '' %>">
+                                    </div>
+                                    <div class="file-field input-field col s12 m4">
+                                        <div class="btn">
+                                            <span>Upload Photo</span>
+                                            <input type="file" name="uploadedFile">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text" value="<%= typeof uploadedFile != 'undefined' ? uploadedFile: '' %>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="btn-small btn-enum blue" type="submit" value="Sign Up">
+
+                                <div class="m-t-25 m-b--5 align-center">
+                                    <a href="/admin">Already have an admin account?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Admin Signup Form -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

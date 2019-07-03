@@ -1,0 +1,97 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Enumerator Update Form</h2>
+            </div>
+            <!-- ENumerator Update Form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <!-- <h2>Enter the new details below and update</h2> -->
+                            <small>Enter the new details below and update</small>
+                        </div>
+                        <div class="body">
+                            <form method="POST" action="/admin/records/enumerator/edit/<%= enumerator._id %>">
+                                <!-- message -->
+                                <% include ../messages %>
+                                <!-- end of message -->
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <label for="firstName">First Name</label>
+                                        <input id="firstName" type="text" class="validate" name="regFirstName" required value=<%= enumerator.firstName %> >
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix"></i>
+                                        <label for="lastName">Last Name</label>
+                                        <input id="lastName" type="text" class="validate" name="regLastName" required value=<%= enumerator.lastName %>>
+                                    </div>
+                                    <div class="input-field col s12 m3">
+                                        <i class="material-icons prefix">person</i>
+                                        <label for="username">Username</label>
+                                        <input id="username" type="text" class="validate" name="regUsername" required value=<%= enumerator.username %>>
+                                    </div>
+                                    <div class="input-field col s3 m3">
+                                        <label for="gender">Gender</label>
+                                        <input id="gender" type="text" class="validate" name="gender" value=<%= enumerator.gender %>>
+                                    </div>
+                                    <div class="input-field col s12 m3">
+                                        <label for="regEmail">Email</label>
+                                        <input id="regEmail" type="email" class="validate" name="regEmail" required value=<%= enumerator.email %>>
+                                    </div>
+                                    <div class="input-field col s12 m3">
+                                        <label for="regPhone">Phone</label>
+                                        <input id="regPhone" type="text" class="validate" name="regPhone" required value=<%= enumerator.phone %>>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h6 class="center reSubHeading green-text">Residential Address</h6>
+                                    <div class="input-field col s12 m4">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <label for="regStAddress">Street Address</label>
+                                        <input id="regStAddress" type="text" class="validate" name="regStAddress" required value=<%= enumerator.email %>>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="regCity">City</label>
+                                        <input id="regCity" type="text" class="validate" name="regCity" required value=<%= enumerator.city %>>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="regState">State/Province</label>
+                                        <input id="regState" type="text" class="validate" name="regState" required value=<%= enumerator.state %>>
+                                    </div>
+                                </div>
+                                <input class="btn-small btn-enum blue" type="submit" value="Update">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# ENumerator Update Form -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

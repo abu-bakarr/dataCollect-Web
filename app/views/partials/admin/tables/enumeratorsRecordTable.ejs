@@ -1,0 +1,103 @@
+<% include ../admin-head %>
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>ENUMERATORS TABLE</h2>
+            </div>
+            <!-- Enumerators Record With Exportable Table -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Showing all the registered enumerators
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <!-- messages -->
+                                <% include ../messages %>
+                                <!-- end of messages -->
+                                <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                    <thead>
+                                        <tr>
+                                            <th>FIRST NAME</th>
+                                            <th>LAST NAME</th>
+                                            <!-- <th>USERNAME</th> -->
+                                            <th>EMAIL</th>
+                                            <th>ADDRESS</th>
+                                            <th>PHONE</th>
+                                            <th>CITY</th>
+                                            <th>ACTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>FIRST NAME</th>
+                                            <th>LAST NAME</th>
+                                            <!-- <th>USERNAME</th> -->
+                                            <th>EMAIL</th>
+                                            <th>ADDRESS</th>
+                                            <th>PHONE</th>
+                                            <th>CITY</th>
+                                            <th>ACTIONS</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <!-- looping through the enumerator -->
+                                        <% enumerator.forEach(enumerator => {%>
+                                        <tr>
+                                            <!-- <td> -->
+                                                <!-- <img src="/images/user.png" alt="" class="circle"> -->
+                                                <!-- <img src="/images/farmerUploads/<%= enumerator.photo %>.png" alt="" class="circle"> -->
+                                            <!-- </td> -->
+                                            <td><%= enumerator.firstName %></td>
+                                            <td><%= enumerator.lastName %></td>
+                                            <!-- <td><%= enumerator.username %></td> -->
+                                            <td><%= enumerator.email %></td>
+                                            <td><%= enumerator.address %></td>
+                                            <td><%= enumerator.phone %></td>
+                                            <td><%= enumerator.city %></td>
+                                            <td>
+                                                <div class="row">
+                                                    <a href="/admin/records/enumerator/edit/<%= enumerator._id %>"><i class="small material-icons orange-text lighten-2">edit</i></a>
+                                                    <a href="/admin/records/enumerators/<%= enumerator._id %>"><i class="small material-icons red-text">delete</i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <%});%>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Enumerators Record With Exportable Table -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

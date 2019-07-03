@@ -1,0 +1,224 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2 class="center">Market Update Form</h2>
+            </div>
+            <!-- Marekt Update Form Wholesale -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Fill in the form for Wholesale</h2>
+                        </div>
+                        <div class="body">
+                            <form method="POST" action="/admin/createMarketData">
+                                <div class="row">
+                                    <!-- messages -->
+                                    <% include ../messages %>
+                                    <!-- end of message -->
+                                 <div class="col s12 m4">
+                                        <div class="form-group">
+                                            <label for="district">Choose District</label>
+                                            <select class="form-control" id="district">
+                                            <option >Western Area Urban</option>
+                                            <option  >Western Area Rural</option>
+                                            <option  >Falaba</option>
+                                            <option  >Koinadugu</option>
+                                            <option  >Bombali</option>
+                                            <option  >Tonkolili</option>
+                                            <option  >Kambia</option>
+                                            <option  >Karene</option>
+                                            <option  >Porto Loko</option>
+                                            <option  >Bo</option>
+                                            <option  >Bonthe</option>
+                                            <option  >pujehun</option>
+                                            <option  >Moyamba</option>
+                                            <option  >Kenema</option>
+                                            <option  >Kaliahun</option>
+                                            <option  >Kono</option>
+                                            </select>
+                                        </div>
+                                     </div>
+                                    <div class="col s12 m4">
+                                        <div class="form-group">
+                                            <label for="product">Choose Product</label>
+                                            <select class="form-control" id="product">
+                                            <option >rice</option>
+                                            <option >Cocao</option>
+                                            <option  >Groundnut</option>
+                                            <option  >Palm oil</option>
+                                            <option  >Cassava</option>
+                                            <option  >Coffee</option>
+                                            <option  >Sweet Potatoe</option>
+                                            <option  >Maize</option>
+                                            </select>
+                                        </div>
+                                     </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="price">Price</label>
+                                        <input id="price" type="number" class="validate" name="price" required>
+                                    </div>
+                                </div>
+                                <input class="btn-large btn-enum blue" type="submit" value="POST">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Marekt Update Form -->
+
+            <!-- Marekt Update Form Retail -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Fill in the form for Retail</h2>
+                    </div>
+                    <div class="body">
+                        <form method="POST" action="/admin/createMarketDataRT">
+                            <div class="row">
+                                <!-- messages -->
+                                <% include ../messages %>
+                                <!-- end of message -->
+                                <div class="col s12 m4">
+                                    <div class="form-group">
+                                        <label for="districtRT">Choose District</label>
+                                        <select class="form-control" id="districtRT">
+                                        <option >Western Area Urban</option>
+                                        <option  >Western Area Rural</option>
+                                        <option  >Falaba</option>
+                                        <option  >Koinadugu</option>
+                                        <option  >Bombali</option>
+                                        <option  >Tonkolili</option>
+                                        <option  >Kambia</option>
+                                        <option  >Karene</option>
+                                        <option  >Porto Loko</option>
+                                        <option  >Bo</option>
+                                        <option  >Bonthe</option>
+                                        <option  >Pujehun</option>
+                                        <option  >Moyamba</option>
+                                        <option  >Kenema</option>
+                                        <option  >Kaliahun</option>
+                                        <option  >Kono</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                <div class="col s12 m4">
+                                    <div class="form-group">
+                                        <label for="productRT">Choose Product</label>
+                                        <select class="form-control" id="productRT">
+                                        <option >Rice</option>
+                                        <option >Cocao</option>
+                                        <option  >Groundnut</option>
+                                        <option  >Palm oil</option>
+                                        <option  >Cassava</option>
+                                        <option  >Coffee</option>
+                                        <option  >Sweet Potatoe</option>
+                                        <option  >Maize</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                <div class="input-field col s12 m4">
+                                    <label for="priceRT">Price</label>
+                                    <input id="priceRT" type="number" class="validate" name="priceRT" required>
+                                </div>
+                            </div>
+                            <input class="btn-large btn-enum blue" type="submit" value="POST">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Marekt Update Form -->
+        
+<!-- Marekt Update Form fro Farm Gate -->
+<div class="row clearfix">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+        <div class="header">
+            <h2>Fill in the form for Farm Gate</h2>
+        </div>
+        <div class="body">
+            <form method="POST" action="/admin/createMarketData">
+                <div class="row">
+                    <!-- messages -->
+                    <% include ../messages %>
+                    <!-- end of message -->
+                    <div class="col s12 m4">
+                        <div class="form-group">
+                            <label for="districtFG">Choose District</label>
+                            <select class="form-control" id="districtFG">
+                            <option >Western Area Urban</option>
+                            <option  >Western Area Rural</option>
+                            <option  >Falaba</option>
+                            <option  >Koinadugu</option>
+                            <option  >Bombali</option>
+                            <option  >Tonkolili</option>
+                            <option  >Kambia</option>
+                            <option  >Karene</option>
+                            <option  >Port Loko</option>
+                            <option  >Bo</option>
+                            <option  >Bonthe</option>
+                            <option  >Pujehun</option>
+                            <option  >Moyamba</option>
+                            <option  >Kenema</option>
+                            <option  >Kaliahun</option>
+                            <option  >Kono</option>
+                            </select>
+                        </div>
+                        </div>
+                    <div class="col s12 m4">
+                        <div class="form-group">
+                            <label for="productFG">Choose Product</label>
+                            <select class="form-control" id="productFG">
+                            <option >Rice</option>
+                            <option >Cocao</option>
+                            <option  >Groundnut</option>
+                            <option  >Palm oil</option>
+                            <option  >Cassava</option>
+                            <option  >Coffee</option>
+                            <option  >Sweet Potatoe</option>
+                            <option  >Maize</option>
+                            </select>
+                        </div>
+                        </div>
+                    <div class="input-field col s12 m4">
+                        <label for="priceFG">Price</label>
+                        <input id="priceFG" type="number" class="validate" name="priceFG" required>
+                    </div>
+                </div>
+                <input class="btn-large btn-enum blue" type="submit" value="POST">
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+        <!-- #END# Marekt Update Form -->
+    </div>
+</section>
+
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

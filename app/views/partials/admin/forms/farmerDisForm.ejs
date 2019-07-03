@@ -1,0 +1,63 @@
+<% include ../admin-head %>
+
+    <body class="theme-green">
+        <!-- Page Loader -->
+        <% include ../admin-page-loader %>
+            <!-- #END# Page Loader -->
+            <!-- Overlay For Sidebars -->
+            <div class="overlay"></div>
+            <!-- #END# Overlay For Sidebars -->
+            <!-- Top Bar -->
+            <% include ../top-nav %>
+                <!-- #Top Bar -->
+                <section>
+                    <!-- Left Sidebar -->
+                    <% include ../admin-left-sidebar %>
+                        <!-- #END# Left Sidebar -->
+                        <!-- Right Sidebar -->
+                        <% include ../admin-right-sidebar %>
+                            <!-- #END# Right Sidebar -->
+                </section>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="block-header">
+                            <h2>Farmer by District Form</h2>
+                        </div>
+                        <!-- Marekt Update Form -->
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2>Please fill in the form</h2>
+                                    </div>
+                                    <div class="body">
+                                        <form method="POST" action="/admin/farmerDisData" class="farmerDisData">
+                                            <div class="row">
+                                                <!-- messages -->
+                                                <% include ../messages %>
+                                                    <!-- end of message -->
+                                                    <div class="input-field col s12 m4">
+                                                        <i class="material-icons prefix"></i>
+                                                        <label for="district">District</label>
+                                                        <input id="district" type="text" class="validate" name="district" required>
+                                                    </div>
+                                                    <div class="input-field col s12 m4">
+                                                        <label for="nofarmers">Tol. Number of Farmers</label>
+                                                        <input id="nofarmers" type="number" class="validate" name="nofarmers" required>
+                                                    </div>
+                                            </div>
+                                            <input class="btn-large btn-enum blue" id="btn-farmer-district" type="submit" value="POST">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #END# farmer district Update Form -->
+                    </div>
+                </section>
+
+                <% include ../admin-jslinks.ejs %>
+    </body>
+
+    </html>

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <% include partials/templates/head.ejs %>
+</head>
+<body id="<%= pageID %>">
+    <!-- header template-->
+    <% include partials/templates/web-header.ejs %>
+
+    <!--- Slider -->
+    <% include partials/templates/slider %>
+    <!-- End of Sldier -->
+
+    <!-- products section-->
+    <!-- general availableProducts -->
+
+    <!-- available product by districts -->
+    <!-- end of product section -->
+
+    <!-- including the third_content-->
+    <% include partials/contents/index_third_content.ejs %>
+
+    <!---Partners parallax-->
+    <% include partials/contents/partners_para.ejs %>
+
+    <!-- including the info content -->
+    <% include partials/contents/info_cont.ejs %>
+
+    <a href="#home" class="to-top"><i class="material-icons">arrow_upward</i></a>
+
+    <!-- firebaseConfig script -->
+    <script src="/js/firebaseConfig.js"></script>
+    <!-- make order script -->
+    <script src="/js/makeOrder.js"></script>
+
+    <!-- including the js scripts template -->
+    <% include partials/templates/jsscripts.ejs %>
+   
+
+</body>
+    <!-- including the footer template -->
+
+</html>

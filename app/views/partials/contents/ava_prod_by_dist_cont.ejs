@@ -1,0 +1,22 @@
+<section class="section ava-products-by-district">
+    <div class="row">
+        <div class="container">
+            <h3 class="center">Availabe Products by Districts</h3>
+            <div class="regular slick-slider">
+              <!-- looping throught the availableProductByDist -->
+              <% fetchedProductPerDistrict.forEach(productPerDistrict => { %>
+                <div class="col s12 m3 content">
+                    <h4><%= productPerDistrict.district %></h4>
+                    <!-- looping through the products array per district -->
+                    <% productPerDistrict.products.forEach(product => { %>
+                        <p><%= product.name %><span class="new badge orange lighten-1"><%= product.quantity %></span></p>
+                    <% }); %>
+                    <!-- end of products array per district -->
+                    <div class="verticalLine"></div>
+                  </div>
+              <% }); %>
+              <!-- end of fetchedProductPerDistrict loop -->
+            </div>
+        </div>
+    </div>
+</section>

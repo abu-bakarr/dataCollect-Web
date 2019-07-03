@@ -1,0 +1,20 @@
+{
+    "info":[{
+            "title": "fertilizers",
+            "shortname": "cacoa",
+            "information": "Demand for fertilizer distribution, target of fertilizer distribution, dispatch-receipt..."
+        },{
+            "title": "Soil Testing",
+            "shortname": "rice",
+            "information": "Soil Health Card, Detailed Detailed Report, List of Agricultural Testers ..."
+        },{
+            "title": "Seed",
+            "shortname": "palmOil",
+            "information": "Information of high yielding seeds, sale price of seeds, warehouse contact, seeds ..."
+        },{
+            "title": "Defense Chemicals",
+            "shortname": "coffee",
+            "information": "Contract Rules of Agricultural Defense Chemicals, Agricultural Defense Chemicals"
+        }
+      ]
+}

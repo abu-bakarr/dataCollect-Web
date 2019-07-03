@@ -1,0 +1,9 @@
+<section class="section about-section">
+    <div class="container">
+      <!-- looping through the about content -->
+      <% fetchedAbout.forEach(about => {%>
+        <h3 class="center"><%= about.title %></h3>
+        <p><%- about.content %></p>
+      <%});%>
+</div>
+</section>

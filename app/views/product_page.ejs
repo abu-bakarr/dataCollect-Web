@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <% include partials/templates/head.ejs %>
+</head>
+
+<body id="<%= pageID %>">
+    <!-- header template-->
+    <% include partials/templates/web-header.ejs %>
+
+
+        <!-- products section-->
+        <!-- general availableProducts -->
+        <% include partials/contents/ava_products_cont.ejs %>
+
+            <!-- available product by districts -->
+            <% include partials/contents/ava_prod_by_dist_cont.ejs %>
+                <!-- end of product section -->
+
+
+                <a href="#home" class="to-top"><i class="material-icons">arrow_upward</i></a>
+
+                <!-- firebaseConfig script -->
+                <script src="/js/firebaseConfig.js"></script>
+                <!-- make order script -->
+                <script src="/js/makeOrder.js"></script>
+
+                <!-- including the js scripts template -->
+                <% include partials/templates/jsscripts.ejs %>
+
+
+</body>
+<!-- including the footer template -->
+
+</html>

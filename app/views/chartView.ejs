@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <% include partials/templates/head.ejs %>
+
+</head>
+
+<body id="<%= pageID %>">
+
+    <% include partials/templates/web-header.ejs %>
+        <!-- display data page -->
+
+        <!-- display data page -->
+        <section class="section dispMarket_section">
+            <div class="col s12 m12 ">
+                <h5 class="center">Price Analysis Charts </h5>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="container center">
+                        <div class="col m4">
+                            <button class="btn hoverable farm-gate green white-text">View Wholesale Price</button>
+                        </div>
+                        <div class="col m4">
+                            <button class="btn hoverable retail green white-text">View Retail Price</button>
+                        </div>
+                        <div class="col m4">
+                            <button class="btn hoverable farm-gate green white-text">View Farm Gate Price</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- chart section -->
+                    <div class="container">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+                                <li class="green-text tab col s2"><a class="active" href="#test1">Rice</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test2">Cacao</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test3">Coffee</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test4">Palm Oil</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test5">Cassava</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test6">Groundnut</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test7">Sweet Potatoe</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test8">Maize</a></li>
+                            </ul>
+                        </div>
+                        <!-- viewing section -->
+                        <br>
+                        <br>
+                        <br>
+                        <div id="test1" class="col s12">
+                            <div id="ricechart" minHeight="100%" width="100%"></div>
+                        </div>
+                        <div id="test2" class="col s12">
+                            <div id="cacaochart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test3" class="col s12">
+                            <div id="coffeechart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test4" class="col s12">
+                            <div id="palmoilchart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test5" class="col s12">
+                            <div id="cassavachart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test6" class="col s12">
+                            <div id="groundnutchart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test7" class="col s12">
+                            <div id="sweetpotatoechart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test8" class="col s12">
+                            <div id="maizechart" height="250px" width="100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second set -->
+            </div>
+            <!--<div class="col s12 m12 retail-price-detail">
+                <h5 class="center">Price Analysis Charts Retails</h5>
+                <br>
+                <br>
+                <div class="row">
+                    
+                    <div class="container">
+                        <div class="col s12">
+                            <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+                                <li class="green-text tab col s2"><a class="active" href="#test1">Rice</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test2">Cacao</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test3">Coffee</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test4">Palm Oil</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test5">Cassava</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test6">Groundnut</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test7">Sweet Potatoe</a></li>
+                                <li class="green-text tab col s2"><a class="active" href="#test8">Maize</a></li>
+                            </ul>
+                        </div>
+                      
+                        <br>
+                        <br>
+                        <div id="test1" class="col s12">
+                            <div id="ricechart" minHeight="100%" width="100%"></div>
+                        </div>
+                        <div id="test2" class="col s12">
+                            <div id="cacaochart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test3" class="col s12">
+                            <div id="coffeechart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test4" class="col s12">
+                            <div id="palmoilchart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test5" class="col s12">
+                            <div id="cassavachart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test6" class="col s12">
+                            <div id="groundnutchart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test7" class="col s12">
+                            <div id="sweetpotatoechart" height="250px" width="100%"></div>
+                        </div>
+                        <div id="test8" class="col s12">
+                            <div id="maizechart" height="250px" width="100%"></div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+
+        <!-- firebase script -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+        <script src="/js/firebaseConfig.js"></script>
+        <!-- including the js scripts template -->
+        <% include partials/templates/jsscripts.ejs %>
+
+            <!-- chart js link -->
+            <script src="/js/charts.js"></script>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>chartContainer -->
+
+</body>
+
+</html>

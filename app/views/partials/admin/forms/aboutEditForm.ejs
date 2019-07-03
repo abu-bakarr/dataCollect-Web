@@ -1,0 +1,70 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>About AMIS Edit panel</h2>
+            </div>
+            <!-- about section edit form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <small>Please fill in the form to post an about content</small>
+                        </div>
+                        <div class="body">
+                            <!-- messages -->
+                            <% include ../messages %>
+                            <!-- end of message -->
+                            <!-- looping through the posts -->
+                            <% fetchedAbout.forEach(about => { %>
+                                <!-- about content edit form -->
+                                <form method="POST" action="/admin/about/edit/<%= about._id %>" id="aboutDisplayForm">
+                                    <div class="row">
+                                        <div class="container">
+                                        <div class="row">
+                                            <div class="input-field col s12 m10">
+                                                <label for="about_heading">About Heading(optional)</label>
+                                                <input type="text" name="about_heading" value="<%= about.title %>">
+                                            </div>
+                                            <div class="input-field col s12 m12">
+                                                <label for="about_content">About Content goes here...</label>
+                                                <textarea class="materialize-textarea" type="text" name="about_content"><%= about.content %>
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                        <input class="btn-small btn-enum blue" type="submit" value="UPDATE">
+                                        </div>
+                                    </div>
+                                </form>
+                            <%});%>
+                            <!-- end of loop -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

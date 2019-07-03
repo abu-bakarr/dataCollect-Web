@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <% include partials/templates/head.ejs %>
+</head>
+<body id="<%= pageID %>">
+    <!-- header template-->
+    <% include partials/templates/web-header %>
+
+    <div class="row">
+        <div class="container">
+            <h3 class="title justify"><%= materials.title %></h3>
+            <p class="justify"><%= materials.content %></p>
+            <i class="material-icons left prefix">chevron_left</i><a href="/">go back</a>   
+        </div>
+    </div>
+    <!-- including the js scripts template -->
+    <% include partials/templates/jsscripts %>
+</body>
+    <!-- including the footer template -->
+
+</html>

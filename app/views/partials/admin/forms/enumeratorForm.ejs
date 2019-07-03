@@ -1,0 +1,128 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>Enumerator Registration Form</h2>
+            </div>
+            <!-- Enumerator Form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Please fill in the form</h2>
+                        </div>
+                        <div class="body">
+                                <form method="POST" action="/admin/register/enumerator">
+                                    <!-- message -->
+                                    <% include ../messages %>
+                                    <!-- end of message -->
+                                    <div class="row">
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <label for="firstName">First Name</label>
+                                            <input id="firstName" type="text" class="validate" name="regFirstName" required value="<%= typeof regFirstName != 'undefined' ? regFirstName: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix"></i>
+                                            <label for="lastName">Last Name</label>
+                                            <input id="lastName" type="text" class="validate" name="regLastName" required value="<%= typeof regLastName != 'undefined' ? regLastName: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m4">
+                                            <i class="material-icons prefix">person</i>
+                                            <label for="username">Username</label>
+                                            <input id="username" type="text" class="validate" name="regUsername" required value="<%= typeof regUsername != 'undefined' ? regUsername: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m4">
+                                            <label for="regEmail">Email</label>
+                                            <input id="regEmail" type="email" class="validate" name="regEmail" required value="<%= typeof regEmail != 'undefined' ? regEmail: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m4">
+                                            <label for="regPhone">Phone</label>
+                                            <input id="regPhone" type="text" class="validate" name="regPhone" required value="<%= typeof regPhone != 'undefined' ? regPhone: '' %>">
+                                        </div>
+                                        <div class="input-field col s3 m3">
+                                                <label for="gender">Gender</label>
+                                                <input id="gender" type="text" class="validate" name="gender" value="<%= typeof gender != 'undefined' ? gender: '' %>">
+                                            <!-- <label>Gender</label> -->
+                                            <!-- <select class="form-control">
+                                                <option value="" disabled selected>Select a gender</option>
+                                                <option value="male">male</option>
+                                                <option value="female">female</option>
+                                            </select> -->
+                                                
+                                                
+                                            <!-- <span><small>Select a gender</small></span>
+                                            <p>
+                                                <label>
+                                                    <input name="sex" type="radio" checked required value="male"/>
+                                                    <span>Male | </span>
+                                                </label>
+                                                <label>
+                                                    <input name="sex" type="radio" checked required value="female"/>
+                                                    <span>Female</span>
+                                                </label>
+                                            </p> -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <h6 class="center reSubHeading green-text">Residential Address</h6>
+                                        <div class="input-field col s12 m4">
+                                            <i class="material-icons prefix">location_on</i>
+                                            <label for="regStAddress">Street Address</label>
+                                            <input id="regStAddress" type="text" class="validate" name="regStAddress" required value="<%= typeof regStAddress != 'undefined' ? regStAddress: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m4">
+                                            <label for="regCity">City</label>
+                                            <input id="regCity" type="text" class="validate" name="regCity" required value="<%= typeof regCity != 'undefined' ? regCity: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m4">
+                                            <label for="regState">State/Province</label>
+                                            <input id="regState" type="text" class="validate" name="regState" required value="<%= typeof regState != 'undefined' ? regState: '' %>">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <h6 class="center reSubHeading green-text">Password Section</h6>
+                                        <div class="input-field col s12 m6">
+                                            <i class="material-icons prefix">lock</i>
+                                            <label for="regPassword">Create Password</label>
+                                            <input id="regPassword" type="password" class="validate" name="regPassword" required value="<%= typeof regPassword != 'undefined' ? regPassword: '' %>">
+                                        </div>
+                                        <div class="input-field col s12 m6">
+                                            <!-- <i class="material-icons prefix"></i> -->
+                                            <label for="regConfirmPassword">Confirm Password</label>
+                                            <input id="regConfirmPassword" type="password" class="validate" name="regConfirmPassword" required value="<%= typeof regConfirmPassword != 'undefined' ? regConfirmPassword: '' %>">
+                                        </div>
+                                    </div>
+                                    <input class="btn-large btn-enum blue" type="submit" name="register" value="Register">
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Enumerator Form -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>

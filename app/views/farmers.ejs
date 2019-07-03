@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <% include partials/templates/head.ejs %> <!-- including the head template-->
+</head>
+<body id="<%= pageID %>">
+    <% include partials/templates/web-header.ejs %> <!-- including the header template -->
+    <!-- farmers section-->
+    <div class="container">
+        <div class="row">
+            <!-- checking if the current pageID matches farmers-->
+            <% if (pageID == 'farmers-page') { %>
+                <h3 class="center">Welcome to the farmers section</h3>
+                <p class="center">Meet with Farmer who are using the AMIS Market platform to sell their agricultural comodities and their experience using it.</p>
+            <% } else { %>
+                <h4 class="center">Farmer Info</h4>
+            <% } %>
+        </div>
+        <div class="row ">
+            <!-- looping through the farmers table -->
+            <% farmer.forEach(fbo => { %>
+                <div class="col s6 m4 farmer">
+                    <h4 class="center">
+                        <a href="/farmers/<%= fbo._id%>" id="farmer-names">
+                        <%= fbo.fbo_name %>
+                        </a>
+                    </h4>
+                    <p class="center">
+                        <a href="/farmers/<%= fbo._id%>">
+                            <img id="img-farmer" src="<%= fbo.photo %>" alt="<%= fbo.fbo_name %>">
+                        </a>
+                    </p>
+                    <!-- displaying the datas from the farmers_data josn file -->
+                    <!-- <h5 class="center">Product: <%= fbo.products %></h5> -->
+                    <p class="center">Location: <%= fbo.location %></p>
+                    <p class="center">Telephone: <%= fbo.executive_head_tele %></p>
+                </div>
+            <% }); %> <!-- end of for each loop -->
+        </div><!-- end of main row -->
+    </div><!-- end of container -->
+
+    <!-- including the js scripts template -->
+    <% include partials/templates/jsscripts.ejs %>
+
+</body>
+    <!-- including the footer template -->
+</html>

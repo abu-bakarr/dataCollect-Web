@@ -1,0 +1,114 @@
+<% include ../admin-head %>
+<body class="theme-green">
+    <!-- Page Loader -->
+    <% include ../admin-page-loader %>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <% include ../top-nav %>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <% include ../admin-left-sidebar %>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <% include ../admin-right-sidebar %>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>FBO Update Form</h2>
+            </div>
+            <!-- FBO Update Form -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <!-- <h2>Enter the new FBO details and update</h2> -->
+                            <small>Enter the new FBO details and update</small>
+                        </div>
+                        <div class="body">
+                            <form method="POST" action="/admin/fbo/record/edit/<%= fbo._id %>?newMethod=PUT" enctype="multipart/form-data">
+                                <!-- message -->
+                                <% include ../messages %>
+                                <!-- end of message -->
+                                <!-- <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <label for="fboName">Name of FBO</label>
+                                        <input id="fboName" type="text" class="validate" name="fboName" required value="<%= typeof fboName != 'undefined' ? fboName: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="listOfProd">Enter the lists of products</label>
+                                        <input id="listOfProd" type="text" class="validate" name="listOfProd" required value="<%= typeof listOfProd != 'undefined' ? listOfProd: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="location">Location</label>
+                                        <input id="location" type="text" class="validate" name="location" required value="<%= typeof location != 'undefined' ? location: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="cheifdom">Cheifdom</label>
+                                        <input id="cheifdom" type="text" class="validate" name="cheifdom" required value="<%= typeof cheifdom != 'undefined' ? cheifdom: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="district">District</label>
+                                        <input id="district" type="text" class="validate" name="district" required value="<%= typeof district != 'undefined' ? district: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="region">Region</label>
+                                        <input id="region" type="text" class="validate" name="region" required value="<%= typeof region != 'undefined' ? region: '' %>">
+                                    </div>
+                                    <div class="input-field col s6 m3">
+                                        <label for="totalNoOfWorkers">Total number of workers</label>
+                                        <input id="totalNoOfWorkers" type="number" class="validate" name="totalNoOfWorkers" required value="<%= typeof totalNoOfWorkers != 'undefined' ? totalNoOfWorkers: '' %>">
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <label for="briefBio">Brief bio about the farm</label>
+                                        <textarea id="briefBio" class="materialize-textarea" type="text" class="validate" name="briefBio" value="<%= typeof briefBio != 'undefined' ? briefBio: '' %>"></textarea>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <!-- <h6 class="center reSubHeading green-text">Executive Head Section</h6> -->
+                                    <div class="input-field col s12 m4">
+                                        <label for="execHeadName">Enter FBO Head Name</label>
+                                        <input id="execHeadName" type="text" class="validate" name="execHeadName" required value=<%= fbo.executive_head_name %>>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="execHeadAddress">Address(optional)</label>
+                                        <input id="execHeadAddress" type="text" class="validate" name="execHeadAddress" value=<%= fbo.executive_head_address %>>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="execHeadTele">Telephone</label>
+                                        <input id="execHeadTele" type="number" class="validate" name="execHeadTele" value=<%= fbo.executive_head_tele %>>
+                                    </div>
+                                    <div class="input-field col s12 m4">
+                                        <label for="execHeadEmail">Email(optional)</label>
+                                        <input id="execHeadEmail" type="email" class="validate" name="execHeadEmail" value=<%= fbo.executive_head_email %>>
+                                    </div>
+                                    <div class="file-field input-field col s12 m4">
+                                        <div class="btn">
+                                            <span>Upload Photo</span>
+                                            <input type="file" name="uploadedFile" value=<%= fbo.photo %> >
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="btn-large btn-enum blue" type="submit" value="Update">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# FBO Update Form -->
+        </div>
+    </section>
+
+    <% include ../admin-jslinks.ejs %>
+  </body>
+
+  </html>
