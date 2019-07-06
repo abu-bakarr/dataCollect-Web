@@ -8,8 +8,8 @@ function getTradeFlowData() {
 
     rootRef.on("child_added", function(snap) {
         var fetchedProduct = snap.child("product").val();
-        var fetchedQuantity = snap.child("quantity").val();
-        var fetchedPrice = snap.child("price").val();
+        var fetchedQuantity = snap.child("tonage").val();
+        var fetchedPrice = snap.child("value").val();
 
         //var fetchedLocality = snap.child("locality").val();
         // var fetchedChiefdom = snap.child("chiefdom").val();

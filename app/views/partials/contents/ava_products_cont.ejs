@@ -25,66 +25,57 @@
                     </div>
                 </div>
 
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h5 class="center wow zoomIn" data-wow-delay="0.8s">Please fill the form below and submit your order</h5>
-                        <form method="POST" action="/order" id="orderForm">
-                            <!-- message -->
-                            <!-- end of message -->
-                            <div class="card row center">
-                                <div class="col s12 m12">
-                                    <div class="input-field green-text">
-                                        <input type="text" id="name" name="name" required>
-                                        <label for="name" class="green-text">Full Name</label>
-                                    </div>
+                 <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h5 class="center wow zoomIn" data-wow-delay="0.8s">Please fill the form below and submit your order</h5>
+                    <form method="POST" action="/order" id="orderForm">
+                        <!-- message -->
+                        <!-- end of message -->
+                        <div class="card row center">
+                            <div class="col s12 m12">
+                                <div class="input-field green-text">
+                                    <input type="text" id="name" name="name" required>
+                                    <label for="name" class="green-text">Full Name</label>
                                 </div>
-                                <div class="col s12 m6">
-                                    <div class="input-field">
-                                        <input type="text" id="address" name="address" required>
-                                        <label for="address" class="green-text">Address</label>
-                                    </div>
-                                </div>
-                                <div class="col s12 m6">
-                                    <div class="input-field">
-                                        <input type="text" id="email" name="email">
-                                        <label for="email" class="green-text">Email</label>
-                                    </div>
-                                </div>
-                                <div class="col s12 m4">
-                                    <div class="input-field">
-                                        <input type="text" id="telephone" name="telephone" required>
-                                        <label for="telephone" class="green-text">Telephone</label>
-                                    </div>
-                                </div>
-                                <div class="col s12 m4">
-                                    <div class="input-field">
-                                        <input type="text" id="product" name="product" required>
-                                        <label for="product" for="product" class="green-text">Product</label>
-                                    </div>
-                                </div>
-                                <div class="col s12 m4">
-                                    <div class="input-field">
-                                        <input type="text" id="quantity" name="quantity" required>
-                                        <label for="quantity" class="green-text">Quantity</label>
-                                    </div>
-                                </div>
-                                 <div class="col s12 m6">
-                                    <div class="input-field">
-                                        <input type="text" id="fbo" name="fbo" value =<%= product.fbo %>>
-                                        <label for="fbo" class="green-text">From </label>
-                                    </div>
-                                 </div>
-                                    <input class="btn btn-large green white-text btn-order modal-close" type="submit" value="Order">
                             </div>
-                            
-                        </form>
-                     </div>
-                 </div>
-                     <div class="modal-footer">
-                        <a href="#!" class="modal-close btn waves-green green white-text btn-flat">Submit</a>
-                    </div> -->
-                <%});%>
-         </div>
-     </div>
+                            <div class="col s12 m6">
+                                <div class="input-field">
+                                    <input type="text" id="address" name="address" required>
+                                    <label for="address" class="green-text">Address</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m6">
+                                <div class="input-field">
+                                    <input type="text" id="email" name="email">
+                                    <label for="email" class="green-text">Email</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="input-field">
+                                    <input type="text" id="telephone" name="telephone" required>
+                                    <label for="telephone" class="green-text">Telephone</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="input-field">
+                                    <input type="text" id="product" name="product" required>
+                                    <label for="product" for="product" class="green-text">Product</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="input-field">
+                                    <input type="text" id="quantity" name="quantity" required>
+                                    <label for="quantity" class="green-text">Quantity</label>
+                                </div>
+                            </div>
+                            <input class="btn btn-large green white-text btn-order modal-close" type="submit" value="Order">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        <%});%>
+    </div>
+</div>
 </section>

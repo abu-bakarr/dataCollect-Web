@@ -53,7 +53,7 @@ var usersRef = ref.child("farmers");
 usersRef.set({});
 
 //setting an environment variable
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3030);
 
 //setting up a view engine
 app.set('view engine', 'ejs');
